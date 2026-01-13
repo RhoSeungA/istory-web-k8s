@@ -134,6 +134,7 @@ jobs:
           ref: ${{ github.ref }} # istory-web-k8s, istory-platform 의 동일한 브렌치 라는 가정
           path: .
           token: ${{ secrets.GIT_ACCESS_TOKEN }}
+          persist-credentials: true
 
       - name: 쿠버네티스 secret 생성 (istory-db-secret)
         run: |
